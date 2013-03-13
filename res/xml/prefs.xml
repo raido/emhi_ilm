@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory android:title="@string/general_settings">
+    <ListPreference android:key="station" android:entries="@array/stations" android:entryValues="@array/stations"
+        android:title="@string/weather_station" android:summary="@string/weather_station_summary" />
+    <CheckBoxPreference android:key="use_gps" android:title="@string/use_wireless_networks"
+        android:summary="@string/use_gps"/>
+    <CheckBoxPreference android:key="use_fahrenheit" android:title="@string/temperature_unit"
+        android:summary="@string/temp_unit_f"/>
+    <CheckBoxPreference android:key="display_windchill" android:title="@string/feels_like_title"
+        android:summary="@string/feels_like_sum" />
+    <CheckBoxPreference android:key="use_mmhg" android:title="@string/airpressure_title"
+        android:summaryOff="@string/airpressure_sumoff" android:summaryOn="@string/airpressure_sumon"/>
+</PreferenceCategory>
+<PreferenceCategory android:title="@string/glaze_notifications">
+    <CheckBoxPreference android:key="glaze_warning" android:summaryOn="@string/notifications_on" android:summaryOff="@string/notifications_off"
+        android:title="@string/notifications"/>
+</PreferenceCategory>
+<PreferenceCategory android:title="@string/global_notification">
+    <RingtonePreference android:ringtoneType="notification" 
+        android:key="ringtone" android:title="@string/ringtone" android:summary="@string/ringtone_summary" />
+    <CheckBoxPreference android:key="vibrate" android:summaryOn="@string/vibrate_on" android:summaryOff="@string/vibrate_off"
+        android:title="@string/vibrate" android:defaultValue="true"/>
+</PreferenceCategory>
+<PreferenceCategory android:title="@string/visual">
+    <ListPreference android:key="background_transparency" android:entries="@array/transparency_entries" 
+        android:entryValues="@array/transparency_entryValues" android:defaultValue="25"  android:summary="@string/set_transparency" android:title="@string/transparency_title"/>
+</PreferenceCategory>
+<PreferenceCategory android:title="@string/about">
+    <Preference android:title="@string/version" android:summary="1.6.3.2 (16.09.2012)"/>
+    <Preference android:title="@string/send_email_developer" android:key="send_email" android:summary="Raido Kuli (raido357@gmail.com)"/>
+    <Preference android:title="@string/weather_data" android:key="weather_data" android:summary="@string/weather_data_summary"/>
+    <Preference android:title="@string/weather_tutorial" android:key="view_tutorial" android:summary="@string/weather_tutorial_summary"/>
+</PreferenceCategory>
+</PreferenceScreen>

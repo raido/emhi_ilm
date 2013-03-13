@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="ee.kuli.emhi.ilm"
+      android:versionCode="34"
+      android:versionName="1.6.3.2" android:installLocation="internalOnly">
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="17"/> 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+ 
+    <application android:icon="@drawable/icon" android:allowBackup="true" android:label="@string/app_name" android:name="ApplicationContext">
+        <receiver android:name=".WeatherProviderTiny" android:label="@string/app_name_tiny_teeny">
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/emhi_weather_tiny" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>       
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".WeatherProvider" android:label="@string/app_name_tiny">
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/emhi_weather" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>       
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".WeatherProviderMedium" android:label="@string/app_name_normal">
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/emhi_weather_medium" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>       
+            </intent-filter>
+        </receiver>
+        <activity android:name=".PreferencesActivity"
+                android:label="@string/configure_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>        
+        </activity><service android:name="EmhiService"></service>
+        <receiver android:name="WeatherBR">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="WeatherTutorial" android:label="@string/app_tutorial"></activity>
+        <uses-library android:name="com.google.android.maps"/>
+        <activity android:name="WeatherMap">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="MapPreferences"></activity>
+    </application>
+</manifest>

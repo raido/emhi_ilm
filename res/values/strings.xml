@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EMHI Weather</string>
+    <string name="app_name_tiny_teeny">EMHI Weather 1x1</string>
+    <string name="app_name_tiny">EMHI Weather 2x1</string>
+    <string name="app_name_normal">EMHI Weather 4x1</string>
+    <string name="use_gps">Show weather based on my location</string>
+    <string name="gps_station_search">Searching for the closest weather station</string>
+    <string-array name="stations">
+        <item >@string/loading</item>
+    </string-array>
+    <string name="temp_unit_f">Display temperature in \u2109</string>
+    <string name="temperature_unknown">\u221E \u00B0</string>
+    <string name="windspeed_unknown">\u221E m/s</string>
+    <string name="humidity_unknown">\u221E %</string>
+    <string name="airpressure_unknown">\u221E hPa</string>
+    <string name="airpressure_unknown_mmhg">\u221E mmHg</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="reloading">Refreshing</string>
+    <string name="check_connectivity">Check connectivity&#8230;</string>
+    <string name="configure_label">Configure EMHI Weather Widget</string>
+    <string name="nearest_weather_station">Nearest weather station is</string>
+    <string name="enable_coarse_location">Your coarse location (Use wireless networks) is disabled. Would you like to enable it ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <string name="glaze_notifications">Glaze notifications</string>
+    <string name="general_settings">General</string>
+    <string name="weather_station">Weather station</string>
+    <string name="weather_station_summary">Pick weather station to display</string>
+    <string name="use_wireless_networks">Use wireless networks</string>
+    <string name="temperature_unit">Temperature unit</string>
+    <string name="notifications_on">Notifications on</string>
+    <string name="notifications_off">Notifications off</string>
+    <string name="notifications">Notifications</string>
+    
+    <string name="global_notification">Global notification settings</string>
+    <string name="ringtone">Notification ringtone</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="vibrate_on">Vibration on</string>
+    <string name="vibrate_off">Vibration off</string>
+    <string name="ringtone_summary">Set global notification ringtone</string>
+    
+    <string name="glaze_warning_text">Glaze warning, temperature is</string>
+    <string name="glaze_warning_short">Glaze warning!</string>
+    
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="send_email_developer">Send email to developer</string>
+    <string name="weather_data">Weather data</string>
+    <string name="weather_data_summary">This application uses weather data from EMHI.ee</string>
+    <string name="choose_email_app">Choose application</string>
+    <string name="feedback">Feedback</string>
+    
+    <string name="weather_icon_desc">Weather phenomenon icon</string>
+    <string name="wind_icon_desc">Wind direction icon</string>
+    <string name="water_icon_desc">Humidity icon</string>
+    
+    <string name="close">Close</string>
+    
+    <string name="airpressure_title">Airpressure unit</string>
+    <string name="airpressure_sumoff">Display airpressure in hPa</string>
+    <string name="airpressure_sumon">Display airpressure in mmHg</string>
+    
+    <string name="weather_tutorial">View tutorial</string>
+    <string name="weather_tutorial_summary">Click here to view application tutorial</string>
+    
+    <string name="visual">Visual</string>
+    <string name="set_transparency">Set global background transparency</string>
+    <string name="transparency_title">Transparency</string>
+    <string name="technical_difficulties">Connection invalid! Try again later&#8230;</string>
+    
+    <string name="feels_like_title">Feels like temperature</string>
+    <string name="feels_like_sum">Display feels like temperature</string>
+    
+    <string name="configBtn">Settings</string>
+    <string name="refreshBtn">Refresh</string>
+    <string name="geocoding_failed">Geocoding stations failed!</string>
+</resources>

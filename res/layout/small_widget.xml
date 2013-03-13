@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:id="@+id/widget_content_wrapper">
+
+
+    
+    <RelativeLayout style="@style/widget_bg" android:duplicateParentState="true">
+        <ImageView android:src="@drawable/widget_bg_75" android:duplicateParentState="true" android:id="@+id/bg_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY"/>
+        <LinearLayout android:layout_alignParentRight="true" android:layout_alignParentTop="true"
+	        android:layout_width="wrap_content" android:layout_height="17dp" android:gravity="center_vertical"
+	        android:layout_marginRight="13dp"
+	        android:layout_marginTop="9dp">
+	        <TextView android:id="@+id/last_update_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="10dp"
+	            android:layout_marginRight="2dp"/>
+	        <ImageView
+	            android:id="@+id/gps_icon"
+	            android:visibility="gone"
+	            android:layout_width="11dp"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/stat_sys_gps_on"
+	            android:layout_marginRight="2dp"
+	            android:contentDescription="@string/use_wireless_networks"/>
+	        <ImageView
+	            android:id="@+id/glaze_icon"
+	            android:visibility="gone"
+	            android:layout_width="11dp"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/ic_dialog_alert"
+	            android:contentDescription="@string/glaze_notifications"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/station_name"
+            style="@style/textStyleStation"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/reloading" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="52dp"
+            android:paddingRight="4dp"
+            android:paddingTop="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            style="@style/textStyleTemp"
+            android:text="@string/temperature_unknown"
+            android:includeFontPadding="false"/>
+        
+           <TextView android:id="@+id/feels_like_temp" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:includeFontPadding="false"
+                android:textSize="11dp"
+                android:textColor="#FFF"
+                android:layout_marginTop="-5dp"
+                android:text="@string/temperature_unknown"
+                android:drawableRight="@drawable/icon_wind_blow"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:contentDescription="@string/weather_icon_desc"
+        android:id="@+id/weather_icon"
+        android:layout_width="68dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="68dp"
+        android:visibility="invisible"
+        android:src="@drawable/weather_clear" />
+     <LinearLayout android:layout_width="30dp"
+            android:layout_marginTop="20dp" android:layout_marginRight="7dp" 
+            android:layout_marginBottom="8dp" android:layout_height="fill_parent"
+            android:id="@+id/configureBtn" android:layout_alignParentRight="true"
+            android:background="@drawable/configure_btn"></LinearLayout>
+</RelativeLayout>

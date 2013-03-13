@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Clear icon -->
+    <string-array name="iconClear">
+        <item>Clear</item>
+    </string-array>
+    
+    <!-- Light shower & rain -->
+    <string-array name="iconLightRain">
+        <item>Light shower</item>
+        <item>Light rain</item>
+    </string-array>
+    
+    <!-- Moderate shower -->
+    <string-array name="iconModerateRain">
+        <item>Moderate shower</item>
+        <item>Moderate rain</item>
+    </string-array>
+    
+    <!-- Heavy rain -->
+    <string-array name="iconHeavyRain">
+        <item>Heavy rain</item>
+        <item>Heavy shower</item>
+    </string-array>
+    
+    <!-- Thunder storm -->
+    <string-array name="iconStorm">
+        <item>Thunder</item>
+        <item>Thunderstorm</item>
+    </string-array>
+    
+    <!-- Variable & few clouds -->
+    <string-array name="iconVariableClouds">
+        <item>Cloudy with clear spells</item>
+        <item>Variable clouds</item>
+    </string-array>
+    
+    <string-array name="iconFewClouds">
+        <item>Few clouds</item>
+    </string-array>
+    
+    <!-- Clouds -->
+    <string-array name="iconClouds">
+        <item>Overcast</item>
+    </string-array>
+    
+    <!-- Fog and Mist -->
+    <string-array name="iconFog">
+        <item>Mist</item>
+        <item>Fog</item>
+    </string-array>
+    
+    <!-- Sleet -->
+    <string-array name="iconLightSleet">
+        <item>Light sleet</item>
+    </string-array>
+    
+    <string-array name="iconSleet">
+        <item>Moderate sleet</item>
+    </string-array>
+    
+    <!-- Light snow -->
+    <string-array name="iconLightSnow">
+        <item>Light snow shower</item>
+        <item>Light snowfall</item>
+    </string-array>
+    
+    <!--  Moderate snow -->
+    <string-array name="iconModerateSnow">
+        <item>Moderate snow shower</item>
+        <item>Moderate snowfall</item>
+    </string-array>
+    
+    <!-- Heavy snow -->
+    <string-array name="iconHeavySnow">
+        <item>Heavy snow shower</item>
+        <item>Hail</item>
+        <item>Heavy snowfall</item>
+        <item>Blowing snow</item>
+        <item>Drifting snow</item>
+    </string-array>
+</resources>

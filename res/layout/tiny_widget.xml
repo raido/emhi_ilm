@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:id="@+id/widget_content_wrapper">
+
+
+    
+    <RelativeLayout style="@style/widget_bg" android:duplicateParentState="true">
+        <ImageView android:src="@drawable/widget_bg_75" android:duplicateParentState="true" android:id="@+id/bg_image"
+            android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY"/>
+        
+		    <ImageView
+		        android:contentDescription="@string/weather_icon_desc"
+		        android:id="@+id/weather_icon"
+		        android:layout_centerHorizontal="true"
+		        android:layout_width="wrap_content"
+		        android:layout_height="54dp"
+		        android:layout_marginTop="-6dp"
+		        android:visibility="invisible"
+		        android:src="@drawable/weather_clear" />
+		    <TextView
+                android:id="@+id/temperature_center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                style="@style/textStyleTemp"
+                android:textSize="20dp"
+                android:text="@string/temperature_unknown"
+                android:includeFontPadding="false"
+                />
+	        <TextView
+	            android:visibility="gone"
+	            android:id="@+id/temperature"
+	             android:layout_centerHorizontal="true"
+	            android:layout_width="wrap_content"
+	            style="@style/textStyleTemp"
+	            android:textSize="16dp"
+	            android:layout_below="@id/weather_icon"
+	            android:layout_marginTop="-3dp"
+	            android:text="@string/temperature_unknown"
+	            android:includeFontPadding="false"/>    
+           <LinearLayout
+            android:layout_width="wrap_content" android:layout_height="17dp" android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:layout_marginBottom="8dp">
+            <TextView android:id="@+id/last_update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginRight="2dp"/>
+            <ImageView
+                android:id="@+id/gps_icon"
+                android:visibility="gone"
+                android:layout_width="11dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stat_sys_gps_on"
+                android:layout_marginRight="2dp"
+                android:contentDescription="@string/use_wireless_networks"/>
+            <ImageView
+                android:id="@+id/glaze_icon"
+                android:visibility="gone"
+                android:layout_width="11dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_dialog_alert"
+                android:contentDescription="@string/glaze_notifications"/>
+        </LinearLayout>
+    </RelativeLayout>
+    
+     <LinearLayout android:layout_width="30dp"
+            android:layout_marginTop="20dp" android:layout_marginRight="7dp" 
+            android:layout_marginBottom="8dp" android:layout_height="fill_parent"
+            android:id="@+id/configureBtn" android:layout_alignParentRight="true"
+            android:background="@drawable/configure_btn"></LinearLayout>
+</RelativeLayout>

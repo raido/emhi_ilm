@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EMHI Ilm</string>
+    <string name="app_name_tiny_teeny">EMHI Ilm 1x1</string>
+    <string name="app_name_tiny">EMHI Ilm 2x1</string>
+    <string name="app_name_normal">EMHI Ilm 4x1</string>
+    <string name="use_gps">Näita ilma minu asukoha baasil</string>
+    <string name="gps_station_search">Lähima ilmajaama otsimine</string>
+    <string-array name="stations">
+        <item >@string/loading</item>
+    </string-array>
+    <string name="temp_unit_f">Kuva temperatuuri \u2109</string>
+    <string name="temperature_unknown">\u221E \u00B0</string>
+    <string name="windspeed_unknown">\u221E m/s</string>
+    <string name="humidity_unknown">\u221E %</string>
+    <string name="airpressure_unknown">\u221E hPa</string>
+    <string name="airpressure_unknown_mmhg">\u221E mmHg</string>
+    <string name="loading">Laadimine&#8230;</string>
+    <string name="reloading">Uuendamine</string>
+    <string name="check_connectivity">Internetiühendus puudub&#8230;</string>
+    <string name="configure_label">Seadistamine EMHI Ilm</string>
+    <string name="nearest_weather_station">Lähim ilmajaam on</string>
+    <string name="enable_coarse_location">Juhtmevabade võrkude kasutamine ei ole lubatud. Kas soovid lubada?</string>
+    <string name="yes">Jah</string>
+    <string name="no">Ei</string> 
+        
+    <string name="glaze_notifications">Jäitehoiatus</string>
+    <string name="general_settings">Üldine</string>
+    <string name="weather_station">Ilmajaam</string>
+    <string name="weather_station_summary">Vali ilmajaam</string>
+    <string name="use_wireless_networks">Kasuta juhtmevabasid võrke</string>
+    <string name="temperature_unit">Temperatuuri ühik</string>
+    <string name="notifications_on">Jäitehoiatus sees</string>
+    <string name="notifications_off">Jäitehoiatus väljas</string>
+    <string name="notifications">Jäitehoiatus</string>
+    
+    <string name="global_notification">Üldised jäitehoiatuse seaded</string>
+    <string name="ringtone">Helin</string>
+    <string name="vibrate">Värin</string>
+    <string name="vibrate_on">Värin sees</string>
+    <string name="vibrate_off">Värin väljas</string>
+    <string name="ringtone_summary">Määra üldine hoiatuse helin</string>
+    
+    <string name="glaze_warning_text">Jäiteoht, temperatuur on</string>
+    <string name="glaze_warning_short">Jäiteoht!</string>
+    
+    <string name="about">Programmist</string>
+    <string name="version">Versioon</string>
+    <string name="send_email_developer">Saada kiri arendajale</string>
+    <string name="weather_data">Kasutatavad ilmaandmed</string>
+    <string name="weather_data_summary">See rakendus kasutab EMHI.EE andmeid</string>
+    <string name="choose_email_app">Vali rakendus</string>
+    <string name="feedback">Tagasiside</string>
+    
+    <string name="weather_icon_desc">Ilmanähtuse ikoon</string>
+    <string name="wind_icon_desc">Tuulesuuna ikoon</string>
+    <string name="water_icon_desc">Õhuniiskuse ikoon</string>
+    
+    <string name="close">Sulge</string>
+    
+    <string name="airpressure_title">Õhurõhu ühik</string>
+    <string name="airpressure_sumoff">Kuva õhurõhku hPa skaalal</string>
+    <string name="airpressure_sumon">Kuva õhurõhku mmHg skaalal</string>
+    
+    <string name="weather_tutorial">Juhend</string>
+    <string name="weather_tutorial_summary">Vajuta siia, et kuvada rakenduse juhendit</string>
+    
+    <string name="visual">Välimus</string>
+    <string name="set_transparency">Määra üldine tausta läbipaistvus</string>
+    <string name="transparency_title">Läbipaistvus</string>
+    <string name="technical_difficulties">Tehniline probleem! Proovi hiljem uuesti&#8230;</string>
+    
+    <string name="feels_like_title">Tajutav temperatuur</string>
+    <string name="feels_like_sum">Kuva tajutav temperatuur</string>
+    
+    <string name="configBtn">Seaded</string>
+    <string name="refreshBtn">Uuenda</string>
+    <string name="geocoding_failed">Ilmajaamade geokodeerimine ebaõnnestus!</string>
+</resources>

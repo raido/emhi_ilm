@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="@string/tutorial_glaze_title" android:textSize="16dp" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/tutorial_glaze" android:drawableLeft="@drawable/icon_snowflake" android:drawablePadding="10dp"/>
+    
+    <TextView android:layout_marginTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="@string/tutorial_reconfig_title" android:textSize="16dp" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/tutorial_reconfig" android:drawableLeft="@drawable/tutorial_right_edge" android:drawablePadding="10dp"/>
+    
+    <TextView android:layout_marginTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="@string/tutorial_bug_title" android:textSize="16dp" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/tutorial_bug" android:drawableLeft="@drawable/tutorial_bug" android:drawablePadding="10dp"/>
+    
+    <TextView android:layout_marginTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:text="@string/tutorial_nodata_title" android:textSize="16dp" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/tutorial_nodata" android:drawableLeft="@drawable/tutorial_no_data" android:drawablePadding="10dp"/>
+    
+    <Button android:layout_width="175dp" android:layout_marginTop="10dp" android:id="@+id/done_btn" android:layout_gravity="center_horizontal" android:layout_height="wrap_content"
+        android:text="@string/tutorial_done"/>
+</LinearLayout>
+</ScrollView>

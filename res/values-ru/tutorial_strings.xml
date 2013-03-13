@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tutorial">Руководство Погоды ЕМХИ</string>
+    <string name="tutorial_glaze_title">Оповещение о заморозках</string>
+    <string name="tutorial_glaze">Заморозки появляются когда темепература падает до 0.5 \u2103 градуса или являетса ниже 0.5 \u2103 градуса. Сигнал не подается, когда телефон находится в тихом режиме.</string>
+    <string name="tutorial_done">Понятно!</string>
+    <string name="tutorial_reconfig_title">Как перенастроить виджет?</string>
+    <string name="tutorial_reconfig">Для настройки виджета дотронься до его правого края.</string>
+    <string name="tutorial_bug_title">Нашёл ошибку, что делать?</string>
+    <string name="tutorial_bug">Нашёл ошибку? Не размещай негативные комментарии в Android Market. Будь полезным и сообщи об ошибке разработчику, чтобы исправить её в приложении.</string>
+    <string name="tutorial_nodata_title">Что значит \u221E бесконечности?</string>
+    <string name="tutorial_nodata">Если появился символ бесконечности, то это значит, что EMHI не предоставляет значение для выбранной станции.</string>
+</resources>

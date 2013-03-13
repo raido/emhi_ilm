@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:id="@+id/widget_content_wrapper">
+    
+    <ImageView android:src="@drawable/widget_bg_75" android:duplicateParentState="true" android:id="@+id/bg_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY"/>
+    
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="11dp">
+	    <ImageView
+	        android:contentDescription="@string/weather_icon_desc"
+	        android:id="@+id/weather_icon"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:visibility="invisible"
+	        android:layout_gravity="center_vertical"
+	        android:src="@drawable/weather_clear" />
+	    
+	    <LinearLayout android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+	    <TextView
+	        android:id="@+id/temperature" 
+	        android:textSize="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:text="@string/temperature_unknown" />
+	     <TextView android:id="@+id/feels_like_temp" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:includeFontPadding="false"
+                android:textSize="11dp"
+                android:textColor="#FFF"
+                android:layout_marginTop="-6dp"
+                android:text="@string/temperature_unknown"
+                android:drawableRight="@drawable/icon_wind_blow"/>
+	    </LinearLayout>
+	        
+	    <LinearLayout
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        android:layout_marginTop="2dp"
+	        android:layout_marginRight="6dp">
+	        <TextView
+	            android:id="@+id/station_name"
+	            style="@style/textStyleStation"
+	            android:textSize="12dp"
+	            android:gravity="right"
+	            android:text="@string/reloading" />
+	       <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_marginTop="1dp"
+	            android:gravity="right">
+	            <TextView
+	                android:id="@+id/wind_speed"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textStyle="bold"
+	                android:textSize="12dp"
+	                android:textColor="#FFFFFF"
+	                android:text="@string/windspeed_unknown"
+	                android:paddingRight="6dp"/>
+		         <ImageView
+		            android:contentDescription="@string/wind_icon_desc"
+			        android:id="@+id/wind_icon"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="right|center"
+			        android:src="@drawable/wind" />
+		   </LinearLayout>
+	         <TextView
+	              android:layout_marginTop="1dp"
+	              android:layout_gravity="right"
+	              android:drawablePadding="6dp"
+	              android:id="@+id/humidity"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"
+	              android:textStyle="bold"
+	              android:textSize="12dp"
+	              android:textColor="#FFFFFF"
+	              android:text="@string/humidity_unknown"
+	              android:paddingRight="2dp"
+	              android:drawableRight="@drawable/water_drop"/>
+	         <TextView
+                  android:layout_gravity="right"
+                  android:id="@+id/airpressure"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:textSize="12dp"
+                  android:textColor="#FFFFFF"
+                  android:text="@string/airpressure_unknown"
+                  android:paddingRight="2dp"
+                  />
+	    </LinearLayout> 
+	</LinearLayout>
+	       <LinearLayout android:layout_centerHorizontal="true" android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content" android:layout_height="17dp" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+	       <TextView android:id="@+id/last_update_time"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textSize="9dp"
+	            android:layout_marginRight="2dp"/>
+	       <ImageView
+                android:id="@+id/windchill_icon"
+                android:visibility="gone"
+                android:layout_width="11dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_wind_blow"
+                android:layout_marginRight="2dp"
+                android:contentDescription="@string/use_wireless_networks"/>
+            <ImageView
+                android:id="@+id/gps_icon"
+                android:visibility="gone"
+                android:layout_width="11dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stat_sys_gps_on"
+                android:layout_marginRight="2dp"
+                android:contentDescription="@string/use_wireless_networks"/>
+            <ImageView
+                android:id="@+id/glaze_icon"
+                android:visibility="gone"
+                android:layout_width="11dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_dialog_alert"
+                android:contentDescription="@string/glaze_notifications"/>
+         </LinearLayout>
+         <LinearLayout android:layout_width="30dp" android:layout_height="82dp" android:layout_marginRight="7dp" android:layout_marginTop="7dp"
+            android:id="@+id/configureBtn" android:layout_alignParentRight="true" 
+            android:background="@drawable/configure_btn"></LinearLayout>
+</RelativeLayout>

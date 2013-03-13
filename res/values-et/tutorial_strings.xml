@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tutorial">EMHI Ilm juhend</string>
+    <string name="tutorial_glaze_title">Jäitehoiatus &amp; teated</string>
+    <string name="tutorial_glaze">Jäitehoiatust kuvatakse ainult juhul kui temperatuur on olnud üle 0.5 \u2103 ja on langenud allapoole või on võrdne 0.5 \u2103. \n\nMärguande heli ei mängita, kui seade on vaikse peale.</string>
+    <string name="tutorial_done">Selge!</string>
+    <string name="tutorial_reconfig_title">Kuidas ma vidinat uuesti seadistan ?</string>
+    <string name="tutorial_reconfig">Vidina seadistamiseks puuduta vidina paremat serva.</string>
+    <string name="tutorial_bug_title">Leidsin vea, mida teha?</string>
+    <string name="tutorial_bug">Leidsid vea ? Ära postita negatiivset kommentaari Android market-isse. Ole kasulik ja kirjuta veast arendajale, et rakenduses viga parandatud saaks.</string>
+    <string name="tutorial_nodata_title">Mida tähendab \u221E sümbol ?</string>
+    <string name="tutorial_nodata">Kui väli ekraanil kuvatakse \u221E sümboliga, siis see tähendab, et EMHI ei paku valitud jaamale välja väärtust. </string>
+</resources>

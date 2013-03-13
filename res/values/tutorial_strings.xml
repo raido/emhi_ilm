@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tutorial">EMHI Weather widget tutorial</string>
+    <string name="tutorial_glaze_title">Glaze warning &amp; notifications</string>
+    <string name="tutorial_glaze">Glaze warning is displayed only if temperature has been above 0.5 \u2103 and has fallen below or is equal to 0.5 \u2103. \n\nNotification sound is not played if your phone is on silent.</string>
+    <string name="tutorial_done">Got it!</string>
+    <string name="tutorial_reconfig_title">How do I reconfigure the widget ?</string>
+    <string name="tutorial_reconfig">Simply touch the right edge of the widget (both 2x1 and 4x1) to open configuration.</string>
+    <string name="tutorial_bug_title">I found a bug, what to do?</string>
+    <string name="tutorial_bug">So, have you found a bug. Don\'t post a negative comment on the market, help the developer and send him an email. Describe what you have found and how to reproduce it.</string>
+    <string name="tutorial_nodata_title">What does the \u221E symbol mean ?</string>
+    <string name="tutorial_nodata">If any field on the widget is displayed with \u221E (infinity) symbol, then it means that EMHI does not provide data for the field. </string>
+</resources>

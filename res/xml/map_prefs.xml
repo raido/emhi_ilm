@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory android:title="@string/general_settings">
+    <CheckBoxPreference android:key="map_fahrenheit" android:title="@string/temperature_unit"
+        android:summary="@string/temp_unit_f"/>
+    <CheckBoxPreference android:key="map_mmhg" android:title="@string/airpressure_title"
+        android:summaryOff="@string/airpressure_sumoff" android:summaryOn="@string/airpressure_sumon"/>
+</PreferenceCategory>
+</PreferenceScreen>
