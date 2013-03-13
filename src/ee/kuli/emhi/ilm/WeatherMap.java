@@ -1,7 +1,6 @@
 package ee.kuli.emhi.ilm;
 
 import java.util.Hashtable;
-import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -14,26 +13,32 @@ import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Point;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.maps.GeoPoint;
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapController;
-import com.google.android.maps.MapView;
-import com.google.android.maps.Overlay;
 
-public class WeatherMap extends MapActivity {
+public class WeatherMap extends FragmentActivity {
 	private EmhiService s;
-	private MapView map;
+	private GoogleMap map;
 	private ProgressDialog progressDialog;
 	private SharedPreferences prefs;
 	
@@ -73,7 +78,13 @@ public class WeatherMap extends MapActivity {
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.map);
-		map = (MapView) findViewById(R.id.mapview);
+		map = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+		prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		
+		/*map = (MapView) findViewById(R.id.map);
+		
+		
 		map.setBuiltInZoomControls(true);
 		List<Overlay> mapOverlays =  map.getOverlays();
 		int lng = (int) (25.46631f * 1E6);
@@ -83,17 +94,10 @@ public class WeatherMap extends MapActivity {
 		MapController controller = map.getController();
 		controller.setZoom(8);
 		controller.setCenter(point);
-		prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		
 		Drawable drawable = getResources().getDrawable(R.drawable.icon);
 		itemizedoverlay = new WeatherOverlay(drawable, WeatherMap.this, map);
-		mapOverlays.add(itemizedoverlay);
-	}
-
-	@Override
-	protected boolean isRouteDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
+		mapOverlays.add(itemizedoverlay);*/
 	}
 
 	@Override
@@ -108,22 +112,32 @@ public class WeatherMap extends MapActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		showProgressDialog();
-		doBindService();
+		int play_services_status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+		if ( play_services_status == ConnectionResult.SUCCESS ) {
+			showProgressDialog();
+			doBindService();
+		} else {
+			GooglePlayServicesUtil.getErrorDialog(play_services_status, this, 0); //Todo handle request code
+		}
 	}
 	
-	class buildMarkers extends AsyncTask<String, Void, String> {
+	class buildMarkers extends AsyncTask<String, Void, Hashtable<String, WidgetInstance>> {
 		private Hashtable<String, WidgetInstance> stations = null;
 		
 		@Override
 		protected void onPreExecute() {
-			itemizedoverlay.clear();
+			//itemizedoverlay.clear();
 		}
 
 		@Override
-		protected String doInBackground(String... params) {
-			stations = s.getStationPool();
-			Set<Entry<String, WidgetInstance>> entries = stations.entrySet();
+		protected Hashtable<String, WidgetInstance> doInBackground(String... params) {
+			return s.getStationPool();
+		}
+		
+		@Override
+		protected void onPostExecute(Hashtable<String, WidgetInstance> result) {
+			
+			Set<Entry<String, WidgetInstance>> entries = result.entrySet();
 			WidgetInstance station = null;
 			boolean map_fahrenheit = prefs.getBoolean("map_fahrenheit", false);
 			boolean map_mmhg = prefs.getBoolean("map_mmhg", false);
@@ -135,31 +149,40 @@ public class WeatherMap extends MapActivity {
 				
 				Location station_loc = ApplicationContext.getStationLocation(station.name);
 				if ( station_loc != null ) {
-					int lat = (int)(station_loc.getLatitude() * 1E6);    
-					int lng = (int)(station_loc.getLongitude() * 1E6);
-					GeoPoint point = new GeoPoint(lat, lng);
-					WeatherOverlayItem overlayitem = new WeatherOverlayItem(point, station.name, "", station);
-					itemizedoverlay.addOverlay(overlayitem);
+					LatLng latlng = new LatLng(station_loc.getLatitude(), station_loc.getLongitude());
+					
+					Bitmap.Config conf = Bitmap.Config.ARGB_8888; 
+					Bitmap bmp = Bitmap.createBitmap(75, 50, conf); 
+					Canvas canvas = new Canvas(bmp);
+					
+					Paint paint = new Paint();
+					paint.setTextAlign(Paint.Align.CENTER);
+					paint.setAntiAlias(true);
+
+					final float densityMultiplier = getResources()
+							.getDisplayMetrics().density;
+					final float scaledPx = 18 * densityMultiplier;
+
+					paint.setTextSize(scaledPx);
+					paint.setARGB(200, 0, 0, 0); // alpha, r, g, b (Black, semi
+													// see-through)
+					paint.setShadowLayer(1f, 1f, 1f, 0xFFB5D408);
+					// show text to the right of the icon
+					canvas.drawText(station.getTemperature(), bmp.getWidth() / 2, 50, paint);
+					
+					map.addMarker(new MarkerOptions()
+                    .position(latlng)
+                    .title(station.name)
+                    .snippet("Population: 4,137,400")
+                    .icon(BitmapDescriptorFactory.fromBitmap(bmp)));
 				} else {
 					Log.i("emhi-widget", "Oops, no station location acquired");
 				}
 			}
-			return null;
-		}
-		
-		@Override
-		protected void onPostExecute(String result) {
+			
+			
 			if(progressDialog != null) {
 				progressDialog.dismiss();
-			}
-			if(stations.size() == 0) {
-				noConnectionDialog();
-			} else {
-				itemizedoverlay.populateNow();	
-				map.invalidate();
-				if(itemizedoverlay.size() == 0) {
-					Toast.makeText(WeatherMap.this, getString(R.string.geocoding_failed), Toast.LENGTH_SHORT).show();
-				}
 			}
 		}
 		
