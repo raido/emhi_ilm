@@ -109,30 +109,31 @@ public final class R {
         public static final int wind=0x7f02002f;
     }
     public static final class id {
-        public static final int airpressure=0x7f090016;
-        public static final int balloon_item_image=0x7f090001;
-        public static final int balloon_item_title=0x7f090002;
-        public static final int bg_image=0x7f090008;
-        public static final int configureBtn=0x7f090010;
-        public static final int done_btn=0x7f090012;
-        public static final int feels_like_temp=0x7f09000e;
-        public static final int glaze_icon=0x7f09000b;
-        public static final int gps_icon=0x7f09000a;
-        public static final int humidity=0x7f090015;
-        public static final int last_update_time=0x7f090009;
-        public static final int map_popup_airpressure=0x7f090006;
-        public static final int map_popup_humidity=0x7f090005;
-        public static final int map_popup_temp=0x7f090003;
-        public static final int map_popup_wind=0x7f090004;
+        public static final int airpressure=0x7f090017;
+        public static final int bg_image=0x7f090009;
+        public static final int configureBtn=0x7f090011;
+        public static final int done_btn=0x7f090013;
+        public static final int feels_like_temp=0x7f09000f;
+        public static final int glaze_icon=0x7f09000c;
+        public static final int gps_icon=0x7f09000b;
+        public static final int humidity=0x7f090016;
+        public static final int last_update_time=0x7f09000a;
+        public static final int map_popup_airpressure=0x7f090007;
+        public static final int map_popup_feels_like=0x7f090005;
+        public static final int map_popup_humidity=0x7f090006;
+        public static final int map_popup_img=0x7f090001;
+        public static final int map_popup_temp=0x7f090002;
+        public static final int map_popup_wind=0x7f090003;
+        public static final int map_wind_icon=0x7f090004;
         public static final int mapview=0x7f090000;
-        public static final int station_name=0x7f09000c;
-        public static final int temperature=0x7f09000d;
-        public static final int temperature_center=0x7f090011;
-        public static final int weather_icon=0x7f09000f;
-        public static final int widget_content_wrapper=0x7f090007;
-        public static final int wind_icon=0x7f090014;
-        public static final int wind_speed=0x7f090013;
-        public static final int windchill_icon=0x7f090017;
+        public static final int station_name=0x7f09000d;
+        public static final int temperature=0x7f09000e;
+        public static final int temperature_center=0x7f090012;
+        public static final int weather_icon=0x7f090010;
+        public static final int widget_content_wrapper=0x7f090008;
+        public static final int wind_icon=0x7f090015;
+        public static final int wind_speed=0x7f090014;
+        public static final int windchill_icon=0x7f090018;
     }
     public static final class layout {
         public static final int map=0x7f030000;
