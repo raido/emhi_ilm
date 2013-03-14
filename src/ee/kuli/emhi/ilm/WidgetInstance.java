@@ -8,6 +8,7 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationProvider;
@@ -35,6 +36,7 @@ public class WidgetInstance {
 	public String winddirection = "0";
 	public int glaze_warnings = 0;
 	public int last_update = 0;
+	private Bitmap bitmap;
 	
 	
 	public int getRawUpdateTime() {
@@ -386,5 +388,13 @@ public class WidgetInstance {
 		} else {
 			use_mmhg = false;
 		}
+	}
+
+	public void setBitmap(Bitmap bmp) {
+		this.bitmap = bmp;
+	}
+	
+	public Bitmap getBitmap() {
+		return this.bitmap;
 	}
 }
